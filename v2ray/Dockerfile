@@ -1,6 +1,6 @@
 FROM alpine:latest as builder
 
-ARG VERSION="v4.23.1"
+ENV VERSION v4.23.1
 
 RUN set -ex \
         && apk add --no-cache \

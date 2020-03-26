@@ -1,6 +1,6 @@
 FROM golang:alpine as builder
 
-ENV GOPROXY="https://goproxy.cn,direct"
+ENV GOPROXY https://goproxy.cn,direct
 
 RUN set -ex \
         && apk add --no-cache \
@@ -41,7 +41,7 @@ RUN caddy -plugins
 
 VOLUME [ "/www","/var/lib/caddy" ]
 
-ENV CADDYPATH="/var/lib/caddy"
+ENV CADDYPATH /var/lib/caddy
 
 WORKDIR /www
 
