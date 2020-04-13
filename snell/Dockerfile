@@ -1,7 +1,7 @@
 FROM alpine:latest as builder
 
-ENV TAG 2.0.0b12
-ENV VERSION v2.0.0-b12
+ENV TAG 2.0.0
+ENV VERSION v2.0.0
 
 RUN set -ex \
         && apk add --no-cache \
